@@ -11,3 +11,7 @@ class NotificacionSMS(Notificacion):
 class NotificacionTelegram(Notificacion):
     def enviar(self, mensaje: str) -> None:
         print(f"[TELEGRAM] Enviando mensaje: {mensaje}")
+
+class NotificacionWhatsApp(Notificacion):
+    def enviar(self, mensaje: str) -> None:
+        print(f"[WHATSAPP] Enviando mensaje: {mensaje}")
