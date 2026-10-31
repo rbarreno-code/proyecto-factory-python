@@ -1,4 +1,4 @@
-from .servicios import NotificacionEmail, NotificacionSMS, NotificacionTelegram
+from .servicios import NotificacionEmail, NotificacionSMS, NotificacionTelegram, NotificacionWhatsApp
 
 class NotificacionFactory:
     @staticmethod
@@ -10,5 +10,7 @@ class NotificacionFactory:
             return NotificacionSMS()
         elif tipo == "telegram":
             return NotificacionTelegram()
+        elif tipo == "whatsapp":
+            return NotificacionWhatsApp()
         else:
             raise ValueError(f"Tipo de notificación '{tipo}' no soportado.")
